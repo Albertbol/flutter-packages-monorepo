@@ -1,0 +1,8 @@
+# melos_managed_dependency_overrides: firebase_crashlytics_provider,connectivity_provider,getx_provider
+dependency_overrides:
+  connectivity_provider:
+    path: ../connectivity_provider
+  firebase_crashlytics_provider:
+    path: ../firebase_crashlytics_provider
+  getx_provider:
+    path: ../getx_provider
