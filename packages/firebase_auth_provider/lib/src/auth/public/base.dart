@@ -12,5 +12,4 @@ abstract class AuthPublicBase {
   Future<AuthResultStatus> unlinkProvider(SignInMethods method);
   Future<AuthResultStatus> signInWithCredential(AuthCredential oauthCredential);
   void setAuthStateChangesListener();
-  Future<void> setInitUser();
 }

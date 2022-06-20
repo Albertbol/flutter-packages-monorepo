@@ -56,34 +56,12 @@ void main() {
         await c.authInit();
         verifyNever(() => r.signInAnonymously());
       });
-      test('Signs in anonymously', () async {
-        when(() => r.setAuthStateChangesListener()).thenReturn(null);
-        when(() => r.setInitUser()).thenAnswer((_) async => {});
-        await c.authInit();
-        verify(() => r.setAuthStateChangesListener()).called(1);
-        verify(() => r.setInitUser()).called(1);
-      });
       test('Sets auth state listener', () async {
         final rxIsOnline = false.obs;
         when(() => r.online).thenReturn(rxIsOnline);
         await c.authInit();
         rxIsOnline.value = true;
         verify(() => r.authStateChangesListener(any())).called(1);
-      });
-    });
-    group('setInitUser', () {
-      test('If current user is null, signs anonymously', () async {
-        when(() => r.currentUser()).thenReturn(null);
-        await c.setInitUser();
-        verify(() => r.signInAnonymously()).called(1);
-      });
-      test(
-          'Else sets up firebaseUser value equal to signed user and not signs in again',
-          () async {
-        when(() => r.currentUser()).thenReturn(fakeUser);
-        await c.setInitUser();
-        expect(c.firebaseUser.value?.uid, fakeUser.uid);
-        verifyNever(() => r.signInAnonymously());
       });
     });
     test('signInAnonymously signs in anonymously', () async {

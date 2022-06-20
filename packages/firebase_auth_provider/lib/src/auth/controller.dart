@@ -22,8 +22,7 @@ class AuthController extends GetxController implements AuthPublic {
   Future<AuthController> authInit() async {
     setWorkers();
     if (repository.online.value) {
-      repository.setAuthStateChangesListener();
-      await repository.setInitUser();
+      setAuthStateChangesListener();
     }
     return this;
   }
@@ -38,16 +37,6 @@ class AuthController extends GetxController implements AuthPublic {
         setAuthStateChangesListener();
       }
     });
-  }
-
-  @override
-  Future<void> setInitUser() async {
-    // await FirebaseAuth.instance.signOut();
-    if (repository.currentUser() == null) {
-      await signInAnonymously();
-    } else {
-      firebaseUser.value = repository.currentUser();
-    }
   }
 
   Future<UserCredential?> signInAnonymously() async {

@@ -30,7 +30,4 @@ class AuthPublic implements AuthPublicBase {
   @override
   void setAuthStateChangesListener() =>
       Get.find<AuthController>().setAuthStateChangesListener();
-
-  @override
-  Future<void> setInitUser() => Get.find<AuthController>().setInitUser();
 }
