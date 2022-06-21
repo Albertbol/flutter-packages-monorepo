@@ -65,6 +65,8 @@ class AuthController extends GetxController implements AuthPublic {
       credentials = await repository.signInWithApple();
     } else if (signInMethod == SignInMethod.google) {
       credentials = await repository.signInWithGoogle();
+    } else if (signInMethod == SignInMethod.facebook) {
+      credentials = await repository.signInWithFacebook();
     }
     return credentials;
   }
