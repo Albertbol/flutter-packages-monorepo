@@ -43,6 +43,7 @@ class AuthController extends GetxController implements AuthPublic {
     return repository.signInAnonymously();
   }
 
+  @override
   void signOut() async {
     return repository.signOut();
   }

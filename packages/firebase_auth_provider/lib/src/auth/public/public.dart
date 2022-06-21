@@ -34,4 +34,7 @@ class AuthPublic implements AuthPublicBase {
   @override
   Future<void> signIn(SignInMethod signInMethod) =>
       Get.find<AuthController>().signIn(signInMethod);
+
+  @override
+  void signOut() => Get.find<AuthController>().signOut();
 }

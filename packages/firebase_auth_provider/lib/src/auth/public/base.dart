@@ -13,4 +13,5 @@ abstract class AuthPublicBase {
   Future<AuthResultStatus> signInWithCredential(AuthCredential oauthCredential);
   void setAuthStateChangesListener();
   Future<void> signIn(SignInMethod signInMethod);
+  void signOut();
 }
