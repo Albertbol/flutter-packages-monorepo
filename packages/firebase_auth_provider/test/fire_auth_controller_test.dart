@@ -84,32 +84,32 @@ void main() {
       test('if apple sign in method provided signs with it', () async {
         when(() => r.signInWithApple())
             .thenAnswer((_) async => FakeUserAuthCredential());
-        await c.getCredentials(SignInMethods.apple);
+        await c.getCredentials(SignInMethod.apple);
         verify(() => r.signInWithApple()).called(1);
       });
       test('if google sign in method provided signs with it', () async {
         when(() => r.signInWithGoogle())
             .thenAnswer((_) async => FakeUserAuthCredential());
-        await c.getCredentials(SignInMethods.google);
+        await c.getCredentials(SignInMethod.google);
         verify(() => r.signInWithGoogle()).called(1);
       });
       test('returns credentials', () async {
         final fake = FakeUserAuthCredential();
         when(() => r.signInWithGoogle()).thenAnswer((_) async => fake);
-        final credentials = await c.getCredentials(SignInMethods.google);
+        final credentials = await c.getCredentials(SignInMethod.google);
         expect(credentials?.token, fake.token);
       });
     });
     group('linkOrSignIn', () {
       test('Skips operation if no credentials provided', () async {
         when(() => r.signInWithApple()).thenAnswer((_) async => null);
-        await c.linkOrSignIn(SignInMethods.apple);
+        await c.linkOrSignIn(SignInMethod.apple);
         verifyNever(() => r.linkWithCredential(any()));
       });
       test('Links with provided credentials', () async {
         final fake = FakeUserAuthCredential();
         when(() => r.signInWithApple()).thenAnswer((_) async => fake);
-        await c.linkOrSignIn(SignInMethods.apple);
+        await c.linkOrSignIn(SignInMethod.apple);
         verify(() => r.linkWithCredential(fake)).called(1);
       });
       test(
@@ -124,7 +124,7 @@ void main() {
             )).thenAnswer((_) async => false);
         when(() => r.linkWithCredential(any())).thenThrow(
             FirebaseAuthException(code: 'credential-already-in-use'));
-        await c.linkOrSignIn(SignInMethods.apple);
+        await c.linkOrSignIn(SignInMethod.apple);
         verify(() => r.openConfirmationDialog(
               title: any(named: 'title'),
               confirmText: any(named: 'confirmText'),
@@ -143,7 +143,7 @@ void main() {
               confirmText: any(named: 'confirmText'),
               content: any(named: 'content'),
             )).thenAnswer((_) async => false);
-        await c.linkOrSignIn(SignInMethods.apple);
+        await c.linkOrSignIn(SignInMethod.apple);
         verify(() => r.openConfirmationDialog(
               title: any(named: 'title'),
               confirmText: any(named: 'confirmText'),
@@ -155,7 +155,7 @@ void main() {
         when(() => r.signInWithApple()).thenAnswer((_) async => fake);
         when(() => r.linkWithCredential(any()))
             .thenThrow(FirebaseAuthException(code: 'i do not exist'));
-        await c.linkOrSignIn(SignInMethods.apple);
+        await c.linkOrSignIn(SignInMethod.apple);
         verifyNever(() => r.signInWithCredential(fake));
       });
       test(
@@ -170,7 +170,7 @@ void main() {
               confirmText: any(named: 'confirmText'),
               content: any(named: 'content'),
             )).thenAnswer((_) async => true);
-        await c.linkOrSignIn(SignInMethods.apple);
+        await c.linkOrSignIn(SignInMethod.apple);
         verify(() => r.signInWithApple()).called(2);
         verify(() => r.signInWithCredential(any())).called(1);
       });
@@ -255,14 +255,14 @@ void main() {
     group('unlinkProvider', () {
       test('Uses authOperationStatusWrapper and returns status', () async {
         when(() => r.unlinkProvider(any())).thenAnswer((_) async => FakeUser());
-        expect(await c.unlinkProvider(SignInMethods.apple),
+        expect(await c.unlinkProvider(SignInMethod.apple),
             AuthResultStatus.successful);
         verify(() => r.unlinkProvider(any())).called(1);
       });
       test('Converts sign in method arg to string and adds .com to the end',
           () async {
         when(() => r.unlinkProvider(any())).thenAnswer((_) async => FakeUser());
-        await c.unlinkProvider(SignInMethods.apple);
+        await c.unlinkProvider(SignInMethod.apple);
         verify(() => r.unlinkProvider('apple.com')).called(1);
       });
     });

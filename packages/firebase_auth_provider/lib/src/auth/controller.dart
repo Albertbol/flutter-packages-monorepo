@@ -54,18 +54,18 @@ class AuthController extends GetxController implements AuthPublic {
     });
   }
 
-  Future<AuthCredential?> getCredentials(SignInMethods signInMethod) async {
+  Future<AuthCredential?> getCredentials(SignInMethod signInMethod) async {
     AuthCredential? credentials;
-    if (signInMethod == SignInMethods.apple) {
+    if (signInMethod == SignInMethod.apple) {
       credentials = await repository.signInWithApple();
-    } else if (signInMethod == SignInMethods.google) {
+    } else if (signInMethod == SignInMethod.google) {
       credentials = await repository.signInWithGoogle();
     }
     return credentials;
   }
 
   @override
-  Future<void> linkOrSignIn(SignInMethods signInMethod) async {
+  Future<void> linkOrSignIn(SignInMethod signInMethod) async {
     AuthCredential? credentials = await getCredentials(signInMethod);
     if (credentials != null) {
       var status = await linkWithCredential(credentials);
@@ -150,7 +150,7 @@ class AuthController extends GetxController implements AuthPublic {
   }
 
   @override
-  Future<AuthResultStatus> unlinkProvider(SignInMethods method) async {
+  Future<AuthResultStatus> unlinkProvider(SignInMethod method) async {
     return authOperationStatusWrapper(
         () => repository.unlinkProvider('${method.name}.com'),
         'unlinkProvider');

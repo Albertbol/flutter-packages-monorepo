@@ -12,7 +12,7 @@ class AuthPublic implements AuthPublicBase {
   Future<AuthController> authInit() => Get.find<AuthController>().authInit();
 
   @override
-  Future<void> linkOrSignIn(SignInMethods signInMethod) =>
+  Future<void> linkOrSignIn(SignInMethod signInMethod) =>
       Get.find<AuthController>().linkOrSignIn(signInMethod);
 
   @override
@@ -21,7 +21,7 @@ class AuthPublic implements AuthPublicBase {
       Get.find<AuthController>().signInWithCredential(oauthCredential);
 
   @override
-  Future<AuthResultStatus> unlinkProvider(SignInMethods method) =>
+  Future<AuthResultStatus> unlinkProvider(SignInMethod method) =>
       Get.find<AuthController>().unlinkProvider(method);
 
   @override

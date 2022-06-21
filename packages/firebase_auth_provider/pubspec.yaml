@@ -26,6 +26,7 @@ dependencies:
   crypto: ^3.0.2
   get: ^4.6.5
   mocktail: ^0.3.0
+  flutter_facebook_auth: ^4.3.4+2
 
 dev_dependencies:
   lints: ^2.0.0

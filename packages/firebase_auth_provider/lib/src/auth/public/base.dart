@@ -8,8 +8,8 @@ abstract class AuthPublicBase {
   Rxn<User> get getFirebaseUser;
   String getUserUid();
   Future<AuthController> authInit();
-  Future<void> linkOrSignIn(SignInMethods signInMethod);
-  Future<AuthResultStatus> unlinkProvider(SignInMethods method);
+  Future<void> linkOrSignIn(SignInMethod signInMethod);
+  Future<AuthResultStatus> unlinkProvider(SignInMethod method);
   Future<AuthResultStatus> signInWithCredential(AuthCredential oauthCredential);
   void setAuthStateChangesListener();
 }
