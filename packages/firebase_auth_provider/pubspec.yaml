@@ -9,7 +9,11 @@ environment:
 
 dependencies:
   firebase_auth: ^3.3.20
-  google_sign_in: ^5.3.3
+  google_sign_in_ios:
+    git:
+      url: https://github.com/mono0926/plugins
+      ref: fix-flutterfire
+      path: packages/google_sign_in/google_sign_in_ios
   sign_in_with_apple: ^4.0.0
   firebase_crashlytics_provider:
     git:
