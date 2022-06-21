@@ -82,6 +82,14 @@ class AuthController extends GetxController implements AuthPublic {
     }
   }
 
+  @override
+  Future<void> signIn(SignInMethod signInMethod) async {
+    AuthCredential? credentials = await getCredentials(signInMethod);
+    if (credentials != null) {
+      await signInWithCredential(credentials);
+    }
+  }
+
   Future<bool> showConfirmationDialog() async {
     final result = await repository.openConfirmationDialog(
         title: 'accountAlreadyExists'.tr,
