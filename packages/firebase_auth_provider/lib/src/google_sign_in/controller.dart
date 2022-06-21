@@ -12,7 +12,7 @@ class GoogleSignInController {
       final GoogleSignInAccount? googleUser = await repository.googleSignIn();
       final GoogleSignInAuthentication? googleAuth =
           await googleUser?.authentication;
-      if (googleAuth?.accessToken != null && googleAuth?.idToken != null) {
+      if (googleAuth?.accessToken != null || googleAuth?.idToken != null) {
         return repository.googleAuthProviderCredential(
           accessToken: googleAuth?.accessToken,
           idToken: googleAuth?.idToken,
