@@ -13,4 +13,6 @@ abstract class FirebaseAuthPublicBase {
   StreamSubscription<User?> authStateChangesListener(void Function(User?)? cb);
 
   Future<UserCredential?> signInWithCredential(AuthCredential credential);
+
+  void signOut();
 }

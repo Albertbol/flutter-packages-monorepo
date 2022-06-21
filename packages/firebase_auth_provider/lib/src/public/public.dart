@@ -29,6 +29,9 @@ class FirebaseAuthPublic implements FirebaseAuthPublicBase {
   Future<UserCredential?> signInWithCredential(AuthCredential credential) =>
       FirebaseAuth.instance.signInWithCredential(credential);
 
+  @override
+  void signOut() => FirebaseAuth.instance.signOut();
+
   // //Main setup
   // Future<void> syncAllAfterLogin() => syncUp();
 }

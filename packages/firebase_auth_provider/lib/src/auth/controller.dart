@@ -43,6 +43,10 @@ class AuthController extends GetxController implements AuthPublic {
     return repository.signInAnonymously();
   }
 
+  void signOut() async {
+    return repository.signOut();
+  }
+
   @override
   void setAuthStateChangesListener() {
     authStateChanges ??= repository.authStateChangesListener((user) async {
