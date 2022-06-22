@@ -10,6 +10,8 @@ abstract class GetxPublicBase {
 
   bool get isIOS;
 
+  bool get isWeb;
+
   setGetLocale(SupportedLocales l);
 
   Locale get getLocale;

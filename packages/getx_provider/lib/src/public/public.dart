@@ -79,4 +79,7 @@ class GetxPublic implements GetxPublicBase {
   Future<dynamic> openConfirmationDialog({title, content, confirmText}) {
     throw UnimplementedError('openConfirmationDialog');
   }
+
+  @override
+  bool get isWeb => GetPlatform.isWeb;
 }
