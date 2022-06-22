@@ -1,4 +1,4 @@
-enum SignInMethod { apple, google, facebook }
+enum SignInMethod { apple, google, facebook, email }
 
 enum AuthResultStatus {
   credentialAlreadyInUse,
