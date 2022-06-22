@@ -54,7 +54,6 @@ class AuthController extends GetxController implements AuthPublic {
       if (user != null) {
         repository.setUserIdentifier(user.uid);
         firebaseUser.value = user;
-        await repository.syncAfterAuthStateChanges();
       }
     });
   }

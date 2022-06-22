@@ -18,8 +18,4 @@ class AuthRepository
         GoogleSignInPublic,
         FacebookSignInControllerPublic {
   const AuthRepository();
-
-  syncAfterAuthStateChanges() async {
-    throw UnimplementedError("syncAfterAuthStateChanges");
-  }
 }
