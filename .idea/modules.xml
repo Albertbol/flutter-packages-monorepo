@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/packages/byte_image_provider/melos_byte_image_provider.iml" filepath="$PROJECT_DIR$/packages/byte_image_provider/melos_byte_image_provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/packages/connectivity_provider/melos_connectivity_provider.iml" filepath="$PROJECT_DIR$/packages/connectivity_provider/melos_connectivity_provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/packages/firebase_auth_provider/melos_firebase_auth_provider.iml" filepath="$PROJECT_DIR$/packages/firebase_auth_provider/melos_firebase_auth_provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/packages/firebase_crashlytics_provider/melos_firebase_crashlytics_provider.iml" filepath="$PROJECT_DIR$/packages/firebase_crashlytics_provider/melos_firebase_crashlytics_provider.iml" />
