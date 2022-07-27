@@ -12,9 +12,11 @@ class FacebookSignInController extends GetxController
 
   @override
   Future<OAuthCredential?> signInWithFacebook() async {
-    final LoginResult loginResult = await FacebookAuth.instance.login();
+    final LoginResult loginResult =
+        await repository.facebookAuthInstanceLogin();
     return loginResult.accessToken == null
         ? null
-        : FacebookAuthProvider.credential(loginResult.accessToken!.token);
+        : repository
+            .facebookAuthProviderCredential(loginResult.accessToken!.token);
   }
 }
