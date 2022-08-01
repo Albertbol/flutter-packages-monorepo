@@ -45,7 +45,8 @@ class GetxPublic implements GetxPublicBase {
   Future<T?> getDialog<T>(Widget widget) => Get.dialog<T>(widget);
 
   @override
-  Future<dynamic>? getToNamed(String route) => Get.toNamed(route);
+  Future<dynamic>? getToNamed(String route, {dynamic arguments}) =>
+      Get.toNamed(route, arguments: arguments);
 
   @override
   void getUntil(String route) =>
