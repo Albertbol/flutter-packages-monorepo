@@ -48,4 +48,6 @@ abstract class GetxPublicBase {
   Map<String, String?> getParameters();
 
   Future<dynamic> openConfirmationDialog({title, content, confirmText});
+
+  String get previousRoute;
 }

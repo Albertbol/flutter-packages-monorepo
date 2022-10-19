@@ -83,4 +83,7 @@ class GetxPublic implements GetxPublicBase {
 
   @override
   bool get isWeb => GetPlatform.isWeb;
+
+  @override
+  String get previousRoute => Get.previousRoute;
 }
