@@ -1,3 +1,7 @@
+## 1.1.1
+
+ - **DOCS**: added readme.
+
 ## 1.1.0
 
  - **FEAT**: use git tag.
