@@ -15,17 +15,17 @@ dependencies:
     git:
       url: https://github.com/Albertbol/flutter-packages-monorepo.git
       path: packages/firebase_crashlytics_provider
-      ref: firebase_crashlytics_provider-v1.0.0
+      ref: firebase_crashlytics_provider-v1.0.1
   connectivity_provider:
     git:
       url: https://github.com/Albertbol/flutter-packages-monorepo.git
       path: packages/connectivity_provider
-      ref: connectivity_provider-v1.0.0
+      ref: connectivity_provider-v1.0.1
   getx_provider:
     git:
       url: https://github.com/Albertbol/flutter-packages-monorepo.git
       path: packages/getx_provider
-      ref: getx_provider-v1.0.0
+      ref: getx_provider-v1.0.1
   crypto: ^3.0.2
   get: ^4.6.5
   mocktail: ^0.3.0
