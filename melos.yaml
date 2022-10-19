@@ -6,6 +6,8 @@ packages:
 command:
   bootstrap:
     usePubspecOverrides: true
+  version:
+    updateGitTagRefs: true
 
 scripts:
   test:all:
