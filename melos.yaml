@@ -1,13 +1,14 @@
 name: flutter-packages-monorepo
+repository: https://github.com/Albertbol/flutter-packages-monorepo
 
 packages:
   - packages/**
 
 command:
-  bootstrap:
-    usePubspecOverrides: true
   version:
+    linkToCommits: true
     updateGitTagRefs: true
+    workspaceChangelog: true
 
 scripts:
   test:all:
@@ -20,8 +21,8 @@ scripts:
       melos exec -c 6 --fail-fast -- \
         "flutter test --no-pub"
     description: Run `flutter test` for a specific package.
-    select-package:
-      dir-exists:
+    packageFilters:
+      dirExists:
         - test
       ignore:
         - "*web*"
