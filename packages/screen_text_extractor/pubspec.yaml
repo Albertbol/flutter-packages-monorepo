@@ -1,5 +1,6 @@
 name: screen_text_extractor
 description: This plugin allows Flutter desktop apps to extract text from screen.
+publish_to: none
 version: 0.0.2
 
 environment:
