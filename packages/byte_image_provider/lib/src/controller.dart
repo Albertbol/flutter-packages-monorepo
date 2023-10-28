@@ -2,11 +2,10 @@ import 'dart:typed_data';
 import 'package:http/http.dart' as http;
 import 'dart:ui' as ui;
 
-import 'package:get/get.dart';
 import 'public/base.dart';
 import 'repository.dart';
 
-class ByteImageProviderController extends GetxController
+class ByteImageProviderController
     implements ByteImageProviderControllerPublicBase {
   final ByteImageProviderControllerRepository repository;
   ByteImageProviderController(
