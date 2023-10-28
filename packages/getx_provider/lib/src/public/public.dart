@@ -5,7 +5,7 @@ import 'package:getx_provider/src/enum.dart';
 
 import 'base.dart';
 
-class GetxPublic implements GetxPublicBase {
+mixin GetxPublic implements GetxPublicBase {
   @override
   String tr(String text, {List<String> args = const []}) => text.trArgs(args);
 

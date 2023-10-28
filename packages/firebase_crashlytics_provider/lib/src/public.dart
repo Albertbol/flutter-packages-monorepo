@@ -2,7 +2,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 
 import 'base.dart';
 
-class FirebaseCrashlyticsPublic implements FirebaseCrashlyticsPublicBase {
+mixin FirebaseCrashlyticsPublic implements FirebaseCrashlyticsPublicBase {
   @override
   Future<void> recordError(dynamic e, String reason,
       {StackTrace? stack}) async {

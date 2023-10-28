@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 import 'base.dart';
 
-class FirebaseAuthPublic implements FirebaseAuthPublicBase {
+mixin FirebaseAuthPublic implements FirebaseAuthPublicBase {
   @override
   User? currentUser() => FirebaseAuth.instance.currentUser;
 

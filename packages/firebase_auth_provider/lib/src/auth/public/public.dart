@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import '../controller.dart';
 import 'base.dart';
 
-class AuthPublic implements AuthPublicBase {
+mixin AuthPublic implements AuthPublicBase {
   @override
   String getUserUid() => Get.find<AuthController>().getUserUid();
   @override

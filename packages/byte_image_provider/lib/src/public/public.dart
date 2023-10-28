@@ -3,7 +3,7 @@ import 'dart:typed_data';
 import '../controller.dart';
 import 'base.dart';
 
-class ByteImageProviderControllerPublic
+mixin ByteImageProviderControllerPublic
     implements ByteImageProviderControllerPublicBase {
   @override
   Future<Uint8List> getByteDataImage(String imageUrl) =>
