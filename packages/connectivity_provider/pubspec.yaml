@@ -10,5 +10,6 @@ environment:
 #   path: ^1.8.0
 
 dev_dependencies:
-  test: ^1.16.0
+  flutter_lints: ^2.0.3
+  test:
 dependencies: {connectivity_plus: ^2.3.4, get: ^4.6.5}

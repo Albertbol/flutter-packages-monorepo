@@ -12,5 +12,6 @@ environment:
 #   path: ^1.8.0
 
 dev_dependencies:
+  flutter_lints: ^2.0.3
   test:
 dependencies: { firebase_crashlytics: ^3.4.2 }
