@@ -1,3 +1,7 @@
+## 1.1.4
+
+ - **FIX**: remove local ref. ([38417bf1](https://github.com/Albertbol/flutter-packages-monorepo/commit/38417bf11df63cee58f0faacc84dc537eb35b1fc))
+
 ## 1.1.3
 
  - Update a dependency to the latest release.

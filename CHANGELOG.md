@@ -15,6 +15,27 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`firebase_auth_provider` - `v1.1.4`](#firebase_auth_provider---v114)
+
+---
+
+#### `firebase_auth_provider` - `v1.1.4`
+
+ - **FIX**: remove local ref. ([38417bf1](https://github.com/Albertbol/flutter-packages-monorepo/commit/38417bf11df63cee58f0faacc84dc537eb35b1fc))
+
+
+## 2023-10-28
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`byte_image_provider` - `v0.0.2+1`](#byte_image_provider---v0021)
  - [`firebase_crashlytics_provider` - `v1.0.2`](#firebase_crashlytics_provider---v102)
  - [`getx_provider` - `v1.0.2`](#getx_provider---v102)
