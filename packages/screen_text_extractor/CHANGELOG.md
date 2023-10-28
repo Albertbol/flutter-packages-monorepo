@@ -1,3 +1,7 @@
+## 0.0.2+1
+
+ - **FIX**: test deps update. ([d30a3416](https://github.com/Albertbol/flutter-packages-monorepo/commit/d30a3416774b76d0cda32d09f77852deb72aa2eb))
+
 ## 0.0.2
 
  - **FEAT**: added screen_text_extractor. ([9bc20d5a](https://github.com/Albertbol/flutter-packages-monorepo/commit/9bc20d5a437b04477d03376d077e50cd1555fc33))

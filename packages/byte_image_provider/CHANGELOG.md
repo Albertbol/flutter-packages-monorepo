@@ -1,3 +1,7 @@
+## 0.0.2+3
+
+ - **FIX**: test deps update. ([d30a3416](https://github.com/Albertbol/flutter-packages-monorepo/commit/d30a3416774b76d0cda32d09f77852deb72aa2eb))
+
 ## 0.0.2+2
 
  - **REFACTOR**: public class to mixin. ([40bfaaa7](https://github.com/Albertbol/flutter-packages-monorepo/commit/40bfaaa7b59813c1fbb96c8692624244eb3de968))

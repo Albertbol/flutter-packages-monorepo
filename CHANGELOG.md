@@ -15,6 +15,52 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`byte_image_provider` - `v0.0.2+3`](#byte_image_provider---v0023)
+ - [`connectivity_provider` - `v1.0.4`](#connectivity_provider---v104)
+ - [`firebase_auth_provider` - `v1.1.6`](#firebase_auth_provider---v116)
+ - [`firebase_crashlytics_provider` - `v1.0.4`](#firebase_crashlytics_provider---v104)
+ - [`getx_provider` - `v1.0.4`](#getx_provider---v104)
+ - [`screen_text_extractor` - `v0.0.2+1`](#screen_text_extractor---v0021)
+
+---
+
+#### `byte_image_provider` - `v0.0.2+3`
+
+ - **FIX**: test deps update. ([d30a3416](https://github.com/Albertbol/flutter-packages-monorepo/commit/d30a3416774b76d0cda32d09f77852deb72aa2eb))
+
+#### `connectivity_provider` - `v1.0.4`
+
+ - **FIX**: test deps update. ([d30a3416](https://github.com/Albertbol/flutter-packages-monorepo/commit/d30a3416774b76d0cda32d09f77852deb72aa2eb))
+
+#### `firebase_auth_provider` - `v1.1.6`
+
+ - **FIX**: test deps update. ([d30a3416](https://github.com/Albertbol/flutter-packages-monorepo/commit/d30a3416774b76d0cda32d09f77852deb72aa2eb))
+
+#### `firebase_crashlytics_provider` - `v1.0.4`
+
+ - **FIX**: test deps update. ([d30a3416](https://github.com/Albertbol/flutter-packages-monorepo/commit/d30a3416774b76d0cda32d09f77852deb72aa2eb))
+
+#### `getx_provider` - `v1.0.4`
+
+ - **FIX**: test deps update. ([d30a3416](https://github.com/Albertbol/flutter-packages-monorepo/commit/d30a3416774b76d0cda32d09f77852deb72aa2eb))
+
+#### `screen_text_extractor` - `v0.0.2+1`
+
+ - **FIX**: test deps update. ([d30a3416](https://github.com/Albertbol/flutter-packages-monorepo/commit/d30a3416774b76d0cda32d09f77852deb72aa2eb))
+
+
+## 2023-10-28
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`byte_image_provider` - `v0.0.2+2`](#byte_image_provider---v0022)
  - [`connectivity_provider` - `v1.0.3`](#connectivity_provider---v103)
  - [`firebase_auth_provider` - `v1.1.5`](#firebase_auth_provider---v115)
