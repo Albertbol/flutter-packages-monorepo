@@ -5,3 +5,8 @@ environment:
   flutter: ">=3.3.0"
 dev_dependencies:
   melos: ^3.1.1
+
+# Run in terminal: rps version
+scripts:
+  version: melos version --all # bump all packages
+  bootstrap: melos bootstrap # install all dependencies
