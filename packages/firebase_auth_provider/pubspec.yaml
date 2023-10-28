@@ -1,6 +1,6 @@
 name: firebase_auth_provider
 description: A starting point for Dart libraries or applications.
-version: 1.1.1
+version: 1.1.2
 publish_to: none
 # homepage: https://www.example.com
 
@@ -21,7 +21,7 @@ dependencies:
     git:
       url: https://github.com/Albertbol/flutter-packages-monorepo.git
       path: packages/connectivity_provider
-      ref: connectivity_provider-v1.0.1
+      ref: connectivity_provider-v1.0.2
   getx_provider:
     git:
       url: https://github.com/Albertbol/flutter-packages-monorepo.git
