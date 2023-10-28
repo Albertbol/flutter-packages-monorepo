@@ -1,3 +1,7 @@
+## 1.0.3
+
+ - **REFACTOR**: public class to mixin. ([40bfaaa7](https://github.com/Albertbol/flutter-packages-monorepo/commit/40bfaaa7b59813c1fbb96c8692624244eb3de968))
+
 ## 1.0.2
 
  - **FIX**: remove comment. ([1ebc66f7](https://github.com/Albertbol/flutter-packages-monorepo/commit/1ebc66f7d99681a3eee0ab5828eb7171193105c0))

@@ -15,6 +15,47 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`byte_image_provider` - `v0.0.2+2`](#byte_image_provider---v0022)
+ - [`connectivity_provider` - `v1.0.3`](#connectivity_provider---v103)
+ - [`firebase_auth_provider` - `v1.1.5`](#firebase_auth_provider---v115)
+ - [`firebase_crashlytics_provider` - `v1.0.3`](#firebase_crashlytics_provider---v103)
+ - [`getx_provider` - `v1.0.3`](#getx_provider---v103)
+
+---
+
+#### `byte_image_provider` - `v0.0.2+2`
+
+ - **REFACTOR**: public class to mixin. ([40bfaaa7](https://github.com/Albertbol/flutter-packages-monorepo/commit/40bfaaa7b59813c1fbb96c8692624244eb3de968))
+
+#### `connectivity_provider` - `v1.0.3`
+
+ - **REFACTOR**: public class to mixin. ([40bfaaa7](https://github.com/Albertbol/flutter-packages-monorepo/commit/40bfaaa7b59813c1fbb96c8692624244eb3de968))
+
+#### `firebase_auth_provider` - `v1.1.5`
+
+ - **REFACTOR**: public class to mixin. ([40bfaaa7](https://github.com/Albertbol/flutter-packages-monorepo/commit/40bfaaa7b59813c1fbb96c8692624244eb3de968))
+
+#### `firebase_crashlytics_provider` - `v1.0.3`
+
+ - **REFACTOR**: public class to mixin. ([40bfaaa7](https://github.com/Albertbol/flutter-packages-monorepo/commit/40bfaaa7b59813c1fbb96c8692624244eb3de968))
+
+#### `getx_provider` - `v1.0.3`
+
+ - **REFACTOR**: public class to mixin. ([40bfaaa7](https://github.com/Albertbol/flutter-packages-monorepo/commit/40bfaaa7b59813c1fbb96c8692624244eb3de968))
+
+
+## 2023-10-28
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`firebase_auth_provider` - `v1.1.4`](#firebase_auth_provider---v114)
 
 ---
