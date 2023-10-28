@@ -1,3 +1,7 @@
+## 1.1.3
+
+ - Update a dependency to the latest release.
+
 ## 1.1.2
 
  - **FIX**: remove comment. ([1ebc66f7](https://github.com/Albertbol/flutter-packages-monorepo/commit/1ebc66f7d99681a3eee0ab5828eb7171193105c0))

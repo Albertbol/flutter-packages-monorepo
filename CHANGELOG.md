@@ -15,6 +15,44 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`byte_image_provider` - `v0.0.2+1`](#byte_image_provider---v0021)
+ - [`firebase_crashlytics_provider` - `v1.0.2`](#firebase_crashlytics_provider---v102)
+ - [`getx_provider` - `v1.0.2`](#getx_provider---v102)
+ - [`firebase_auth_provider` - `v1.1.3`](#firebase_auth_provider---v113)
+
+Packages with dependency updates only:
+
+> Packages listed below depend on other packages in this workspace that have had changes. Their versions have been incremented to bump the minimum dependency versions of the packages they depend upon in this project.
+
+ - `firebase_auth_provider` - `v1.1.3`
+
+---
+
+#### `byte_image_provider` - `v0.0.2+1`
+
+ - **FIX**: remove comment. ([9d06c939](https://github.com/Albertbol/flutter-packages-monorepo/commit/9d06c939a3667bd7fda9d1ea045aac5a45392e6d))
+
+#### `firebase_crashlytics_provider` - `v1.0.2`
+
+ - **FIX**: remove comment. ([9d06c939](https://github.com/Albertbol/flutter-packages-monorepo/commit/9d06c939a3667bd7fda9d1ea045aac5a45392e6d))
+
+#### `getx_provider` - `v1.0.2`
+
+ - **FIX**: remove comment. ([9d06c939](https://github.com/Albertbol/flutter-packages-monorepo/commit/9d06c939a3667bd7fda9d1ea045aac5a45392e6d))
+
+
+## 2023-10-28
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`byte_image_provider` - `v0.0.1+2`](#byte_image_provider---v0012)
  - [`connectivity_provider` - `v1.0.2`](#connectivity_provider---v102)
  - [`firebase_auth_provider` - `v1.1.2`](#firebase_auth_provider---v112)
