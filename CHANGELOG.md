@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-11-05
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`json_annotation_helpers` - `v0.0.2`](#json_annotation_helpers---v002)
+
+---
+
+#### `json_annotation_helpers` - `v0.0.2`
+
+ - **FEAT**: get location packages. ([704fbb40](https://github.com/Albertbol/flutter-packages-monorepo/commit/704fbb404b990efcf51f020a25a75b5315c873cc))
+
+
 ## 2023-10-28
 
 ### Changes
