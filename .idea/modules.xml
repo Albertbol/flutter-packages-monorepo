@@ -6,7 +6,10 @@
       <module fileurl="file://$PROJECT_DIR$/packages/connectivity_provider/melos_connectivity_provider.iml" filepath="$PROJECT_DIR$/packages/connectivity_provider/melos_connectivity_provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/packages/firebase_auth_provider/melos_firebase_auth_provider.iml" filepath="$PROJECT_DIR$/packages/firebase_auth_provider/melos_firebase_auth_provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/packages/firebase_crashlytics_provider/melos_firebase_crashlytics_provider.iml" filepath="$PROJECT_DIR$/packages/firebase_crashlytics_provider/melos_firebase_crashlytics_provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/get_location_info/melos_get_location_info.iml" filepath="$PROJECT_DIR$/packages/get_location_info/melos_get_location_info.iml" />
       <module fileurl="file://$PROJECT_DIR$/packages/getx_provider/melos_getx_provider.iml" filepath="$PROJECT_DIR$/packages/getx_provider/melos_getx_provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/json_annotation_helpers/melos_json_annotation_helpers.iml" filepath="$PROJECT_DIR$/packages/json_annotation_helpers/melos_json_annotation_helpers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/location_info_bloc/melos_location_info_bloc.iml" filepath="$PROJECT_DIR$/packages/location_info_bloc/melos_location_info_bloc.iml" />
       <module fileurl="file://$PROJECT_DIR$/packages/screen_text_extractor/melos_screen_text_extractor.iml" filepath="$PROJECT_DIR$/packages/screen_text_extractor/melos_screen_text_extractor.iml" />
       <module fileurl="file://$PROJECT_DIR$/melos_flutter-packages-monorepo.iml" filepath="$PROJECT_DIR$/melos_flutter-packages-monorepo.iml" />
     </modules>
