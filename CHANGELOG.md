@@ -15,6 +15,27 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`location_info_bloc` - `v1.1.1`](#location_info_bloc---v111)
+
+---
+
+#### `location_info_bloc` - `v1.1.1`
+
+ - **REFACTOR**: move location info to src. ([a104c063](https://github.com/Albertbol/flutter-packages-monorepo/commit/a104c063f418f2a068e916d04045e8e9df068773))
+
+
+## 2023-11-05
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`get_location_info` - `v0.0.2`](#get_location_info---v002)
  - [`location_info_bloc` - `v1.1.0`](#location_info_bloc---v110)
 
