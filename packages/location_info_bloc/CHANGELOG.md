@@ -1,3 +1,7 @@
+## 1.1.2
+
+ - **REFACTOR**: move files to src. ([4e1cc477](https://github.com/Albertbol/flutter-packages-monorepo/commit/4e1cc4771c389593eec7cde341ede88d150806e5))
+
 ## 1.1.1
 
  - **REFACTOR**: move location info to src. ([a104c063](https://github.com/Albertbol/flutter-packages-monorepo/commit/a104c063f418f2a068e916d04045e8e9df068773))
