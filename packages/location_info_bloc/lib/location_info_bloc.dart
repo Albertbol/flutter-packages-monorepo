@@ -3,4 +3,5 @@
 /// More dartdocs go here.
 library;
 
-export 'package:location_info_bloc/bloc/location_bloc.dart';
+export 'package:location_info_bloc/src/bloc/location_bloc.dart'
+    show LocationBloc, LocationEvent, LocationState;
