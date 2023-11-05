@@ -15,6 +15,32 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`get_location_info` - `v0.0.2+2`](#get_location_info---v0022)
+ - [`location_info_bloc` - `v1.1.3`](#location_info_bloc---v113)
+
+---
+
+#### `get_location_info` - `v0.0.2+2`
+
+ - **REFACTOR**: export all. ([d2456f80](https://github.com/Albertbol/flutter-packages-monorepo/commit/d2456f80ce0a0a145782382d6822340c7bcaf051))
+
+#### `location_info_bloc` - `v1.1.3`
+
+ - **REFACTOR**: export all. ([d2456f80](https://github.com/Albertbol/flutter-packages-monorepo/commit/d2456f80ce0a0a145782382d6822340c7bcaf051))
+
+
+## 2023-11-05
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`get_location_info` - `v0.0.2+1`](#get_location_info---v0021)
  - [`json_annotation_helpers` - `v0.0.2+1`](#json_annotation_helpers---v0021)
  - [`location_info_bloc` - `v1.1.2`](#location_info_bloc---v112)

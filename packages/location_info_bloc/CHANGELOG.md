@@ -1,3 +1,7 @@
+## 1.1.3
+
+ - **REFACTOR**: export all. ([d2456f80](https://github.com/Albertbol/flutter-packages-monorepo/commit/d2456f80ce0a0a145782382d6822340c7bcaf051))
+
 ## 1.1.2
 
  - **REFACTOR**: move files to src. ([4e1cc477](https://github.com/Albertbol/flutter-packages-monorepo/commit/4e1cc4771c389593eec7cde341ede88d150806e5))
