@@ -6,6 +6,10 @@ class LocationState extends Equatable {
   List<Object> get props => [];
 }
 
+final class LocationRequesting extends LocationState {
+  const LocationRequesting();
+}
+
 final class LocationReceived extends LocationState {
   final Position position;
   const LocationReceived(this.position);

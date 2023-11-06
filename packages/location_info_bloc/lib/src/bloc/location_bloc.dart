@@ -20,6 +20,7 @@ class LocationBloc extends Bloc<LocationEvent, LocationState> {
 
   void _getLocation(
       LocationInitiated event, Emitter<LocationState> emit) async {
+    emit(const LocationRequesting());
     if (await checkPermission(emit)) {
       final position = await getLocationInfoRepository.getCurrentPosition();
       emit(LocationReceived(position));
