@@ -1,3 +1,7 @@
+## 1.2.0
+
+ - **FEAT**: added requesting state to location. ([7e6a6444](https://github.com/Albertbol/flutter-packages-monorepo/commit/7e6a64445f5cb858cf36aa44f8b46f2b522690c8))
+
 ## 1.1.3
 
  - **REFACTOR**: export all. ([d2456f80](https://github.com/Albertbol/flutter-packages-monorepo/commit/d2456f80ce0a0a145782382d6822340c7bcaf051))

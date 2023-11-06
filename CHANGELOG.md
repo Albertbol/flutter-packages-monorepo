@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-11-06
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`location_info_bloc` - `v1.2.0`](#location_info_bloc---v120)
+
+---
+
+#### `location_info_bloc` - `v1.2.0`
+
+ - **FEAT**: added requesting state to location. ([7e6a6444](https://github.com/Albertbol/flutter-packages-monorepo/commit/7e6a64445f5cb858cf36aa44f8b46f2b522690c8))
+
+
 ## 2023-11-05
 
 ### Changes
