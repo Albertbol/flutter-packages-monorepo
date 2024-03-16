@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-03-16
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`get_user_region_from_ip` - `v1.0.2`](#get_user_region_from_ip---v102)
+
+---
+
+#### `get_user_region_from_ip` - `v1.0.2`
+
+ - **FIX**: updated init version for packagin. ([aaf0eee1](https://github.com/Albertbol/flutter-packages-monorepo/commit/aaf0eee1592ad534d0a5d506b6e33e63d6db7bde))
+
+
 ## 2023-11-06
 
 ### Changes
