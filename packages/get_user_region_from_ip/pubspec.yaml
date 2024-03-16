@@ -1,6 +1,6 @@
 name: get_user_region_from_ip
 description: Gets the user's region from their IP address.
-version: 1.0.0
+version: 1.0.1
 # repository: https://github.com/my_org/my_repo
 
 environment:
