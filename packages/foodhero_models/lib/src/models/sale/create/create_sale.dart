@@ -1,3 +1,5 @@
+// ignore_for_file: invalid_annotation_target
+
 import 'package:foodhero_models/foodhero_models.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -7,6 +9,7 @@ part 'create_sale.g.dart';
 @freezed
 class CreateSale with _$CreateSale {
   const CreateSale._();
+  @JsonSerializable(fieldRename: FieldRename.snake)
   const factory CreateSale({
     required int locationId,
     required String name,
@@ -15,7 +18,6 @@ class CreateSale with _$CreateSale {
     required int price,
     required int originalPrice,
     required SaleCategory category,
-    // ignore: invalid_annotation_target
     @JsonKey(toJson: _daySchedulesToJson)
     required List<DaySchedule> daySchedules,
     required String imageUrl,

@@ -6,11 +6,11 @@ part 'place_autocomplete_prediction.g.dart';
 
 @freezed
 class PlaceAutocompletePrediction with _$PlaceAutocompletePrediction {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   const factory PlaceAutocompletePrediction({
     required String description,
-    @JsonKey(name: 'matched_substrings')
     required List<MatchedSubstring> matchedSubstrings,
-    @JsonKey(name: 'place_id') required String placeId,
+    required String placeId,
     required String reference,
     required List<String> types,
   }) = _PlaceAutocompletePrediction;

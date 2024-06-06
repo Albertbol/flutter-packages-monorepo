@@ -8,11 +8,12 @@ part 'organization.g.dart';
 class Organization with _$Organization {
   // ignore: unused_element
   const Organization._();
+  @JsonSerializable(fieldRename: FieldRename.snake)
   const factory Organization({
     required int id,
-    @JsonKey(name: 'stripe_account_id') required String stripeAccountId,
-    @JsonKey(name: 'details_submitted') required bool detailsSubmitted,
-    @JsonKey(name: 'payouts_enabled') required bool payoutsEnabled,
+    required String stripeAccountId,
+    required bool detailsSubmitted,
+    required bool payoutsEnabled,
   }) = _Organization;
 
   factory Organization.fromJson(Map<String, dynamic> json) =>

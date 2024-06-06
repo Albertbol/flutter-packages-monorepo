@@ -22,13 +22,9 @@ DayScheduleWithSupplyAvailable _$DayScheduleWithSupplyAvailableFromJson(
 /// @nodoc
 mixin _$DayScheduleWithSupplyAvailable {
   bool get closed => throw _privateConstructorUsedError;
-  @JsonKey(name: 'day_of_week')
   Day get dayOfWeek => throw _privateConstructorUsedError;
-  @JsonKey(name: 'end_time')
   String get endTime => throw _privateConstructorUsedError;
-  @JsonKey(name: 'start_time')
   String get startTime => throw _privateConstructorUsedError;
-  @JsonKey(name: 'supply_available')
   int get supplyAvailable => throw _privateConstructorUsedError;
   int get supply => throw _privateConstructorUsedError;
 
@@ -48,10 +44,10 @@ abstract class $DayScheduleWithSupplyAvailableCopyWith<$Res> {
   @useResult
   $Res call(
       {bool closed,
-      @JsonKey(name: 'day_of_week') Day dayOfWeek,
-      @JsonKey(name: 'end_time') String endTime,
-      @JsonKey(name: 'start_time') String startTime,
-      @JsonKey(name: 'supply_available') int supplyAvailable,
+      Day dayOfWeek,
+      String endTime,
+      String startTime,
+      int supplyAvailable,
       int supply});
 }
 
@@ -116,10 +112,10 @@ abstract class _$$DayScheduleWithSupplyAvailableImplCopyWith<$Res>
   @useResult
   $Res call(
       {bool closed,
-      @JsonKey(name: 'day_of_week') Day dayOfWeek,
-      @JsonKey(name: 'end_time') String endTime,
-      @JsonKey(name: 'start_time') String startTime,
-      @JsonKey(name: 'supply_available') int supplyAvailable,
+      Day dayOfWeek,
+      String endTime,
+      String startTime,
+      int supplyAvailable,
       int supply});
 }
 
@@ -173,15 +169,16 @@ class __$$DayScheduleWithSupplyAvailableImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$DayScheduleWithSupplyAvailableImpl
     extends _DayScheduleWithSupplyAvailable {
   const _$DayScheduleWithSupplyAvailableImpl(
       {required this.closed,
-      @JsonKey(name: 'day_of_week') required this.dayOfWeek,
-      @JsonKey(name: 'end_time') required this.endTime,
-      @JsonKey(name: 'start_time') required this.startTime,
-      @JsonKey(name: 'supply_available') required this.supplyAvailable,
+      required this.dayOfWeek,
+      required this.endTime,
+      required this.startTime,
+      required this.supplyAvailable,
       required this.supply})
       : super._();
 
@@ -192,16 +189,12 @@ class _$DayScheduleWithSupplyAvailableImpl
   @override
   final bool closed;
   @override
-  @JsonKey(name: 'day_of_week')
   final Day dayOfWeek;
   @override
-  @JsonKey(name: 'end_time')
   final String endTime;
   @override
-  @JsonKey(name: 'start_time')
   final String startTime;
   @override
-  @JsonKey(name: 'supply_available')
   final int supplyAvailable;
   @override
   final int supply;
@@ -252,10 +245,10 @@ abstract class _DayScheduleWithSupplyAvailable
     extends DayScheduleWithSupplyAvailable {
   const factory _DayScheduleWithSupplyAvailable(
       {required final bool closed,
-      @JsonKey(name: 'day_of_week') required final Day dayOfWeek,
-      @JsonKey(name: 'end_time') required final String endTime,
-      @JsonKey(name: 'start_time') required final String startTime,
-      @JsonKey(name: 'supply_available') required final int supplyAvailable,
+      required final Day dayOfWeek,
+      required final String endTime,
+      required final String startTime,
+      required final int supplyAvailable,
       required final int supply}) = _$DayScheduleWithSupplyAvailableImpl;
   const _DayScheduleWithSupplyAvailable._() : super._();
 
@@ -265,16 +258,12 @@ abstract class _DayScheduleWithSupplyAvailable
   @override
   bool get closed;
   @override
-  @JsonKey(name: 'day_of_week')
   Day get dayOfWeek;
   @override
-  @JsonKey(name: 'end_time')
   String get endTime;
   @override
-  @JsonKey(name: 'start_time')
   String get startTime;
   @override
-  @JsonKey(name: 'supply_available')
   int get supplyAvailable;
   @override
   int get supply;

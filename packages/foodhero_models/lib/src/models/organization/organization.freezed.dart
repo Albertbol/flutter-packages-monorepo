@@ -21,11 +21,8 @@ Organization _$OrganizationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Organization {
   int get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'stripe_account_id')
   String get stripeAccountId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'details_submitted')
   bool get detailsSubmitted => throw _privateConstructorUsedError;
-  @JsonKey(name: 'payouts_enabled')
   bool get payoutsEnabled => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -42,9 +39,9 @@ abstract class $OrganizationCopyWith<$Res> {
   @useResult
   $Res call(
       {int id,
-      @JsonKey(name: 'stripe_account_id') String stripeAccountId,
-      @JsonKey(name: 'details_submitted') bool detailsSubmitted,
-      @JsonKey(name: 'payouts_enabled') bool payoutsEnabled});
+      String stripeAccountId,
+      bool detailsSubmitted,
+      bool payoutsEnabled});
 }
 
 /// @nodoc
@@ -96,9 +93,9 @@ abstract class _$$OrganizationImplCopyWith<$Res>
   @useResult
   $Res call(
       {int id,
-      @JsonKey(name: 'stripe_account_id') String stripeAccountId,
-      @JsonKey(name: 'details_submitted') bool detailsSubmitted,
-      @JsonKey(name: 'payouts_enabled') bool payoutsEnabled});
+      String stripeAccountId,
+      bool detailsSubmitted,
+      bool payoutsEnabled});
 }
 
 /// @nodoc
@@ -139,13 +136,14 @@ class __$$OrganizationImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$OrganizationImpl extends _Organization {
   const _$OrganizationImpl(
       {required this.id,
-      @JsonKey(name: 'stripe_account_id') required this.stripeAccountId,
-      @JsonKey(name: 'details_submitted') required this.detailsSubmitted,
-      @JsonKey(name: 'payouts_enabled') required this.payoutsEnabled})
+      required this.stripeAccountId,
+      required this.detailsSubmitted,
+      required this.payoutsEnabled})
       : super._();
 
   factory _$OrganizationImpl.fromJson(Map<String, dynamic> json) =>
@@ -154,13 +152,10 @@ class _$OrganizationImpl extends _Organization {
   @override
   final int id;
   @override
-  @JsonKey(name: 'stripe_account_id')
   final String stripeAccountId;
   @override
-  @JsonKey(name: 'details_submitted')
   final bool detailsSubmitted;
   @override
-  @JsonKey(name: 'payouts_enabled')
   final bool payoutsEnabled;
 
   @override
@@ -204,9 +199,8 @@ class _$OrganizationImpl extends _Organization {
 abstract class _Organization extends Organization {
   const factory _Organization(
       {required final int id,
-      @JsonKey(name: 'stripe_account_id') required final String stripeAccountId,
-      @JsonKey(name: 'details_submitted') required final bool detailsSubmitted,
-      @JsonKey(name: 'payouts_enabled')
+      required final String stripeAccountId,
+      required final bool detailsSubmitted,
       required final bool payoutsEnabled}) = _$OrganizationImpl;
   const _Organization._() : super._();
 
@@ -216,13 +210,10 @@ abstract class _Organization extends Organization {
   @override
   int get id;
   @override
-  @JsonKey(name: 'stripe_account_id')
   String get stripeAccountId;
   @override
-  @JsonKey(name: 'details_submitted')
   bool get detailsSubmitted;
   @override
-  @JsonKey(name: 'payouts_enabled')
   bool get payoutsEnabled;
   @override
   @JsonKey(ignore: true)

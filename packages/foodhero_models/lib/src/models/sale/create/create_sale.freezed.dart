@@ -26,8 +26,7 @@ mixin _$CreateSale {
   String? get pickupInformation => throw _privateConstructorUsedError;
   int get price => throw _privateConstructorUsedError;
   int get originalPrice => throw _privateConstructorUsedError;
-  SaleCategory get category =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  SaleCategory get category => throw _privateConstructorUsedError;
   @JsonKey(toJson: _daySchedulesToJson)
   List<DaySchedule> get daySchedules => throw _privateConstructorUsedError;
   String get imageUrl => throw _privateConstructorUsedError;
@@ -203,7 +202,8 @@ class __$$CreateSaleImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$CreateSaleImpl extends _CreateSale {
   const _$CreateSaleImpl(
       {required this.locationId,
@@ -236,9 +236,7 @@ class _$CreateSaleImpl extends _CreateSale {
   final int originalPrice;
   @override
   final SaleCategory category;
-// ignore: invalid_annotation_target
   final List<DaySchedule> _daySchedules;
-// ignore: invalid_annotation_target
   @override
   @JsonKey(toJson: _daySchedulesToJson)
   List<DaySchedule> get daySchedules {
@@ -337,7 +335,7 @@ abstract class _CreateSale extends CreateSale {
   int get originalPrice;
   @override
   SaleCategory get category;
-  @override // ignore: invalid_annotation_target
+  @override
   @JsonKey(toJson: _daySchedulesToJson)
   List<DaySchedule> get daySchedules;
   @override

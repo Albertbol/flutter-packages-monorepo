@@ -9,6 +9,11 @@ extension StringExtension on String {
     }
   }
 
+  String hhmmssToHhmm() {
+    final parts = split(':');
+    return '${parts[0]}:${parts[1]}';
+  }
+
   int toTimeInt() {
     final parts = split(':');
     return int.parse(parts[0]) * 100 + int.parse(parts[1]);

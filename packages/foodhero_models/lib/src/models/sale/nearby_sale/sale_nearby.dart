@@ -3,15 +3,14 @@
 import 'package:foodhero_models/foodhero_models.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'sale_daily.freezed.dart';
-part 'sale_daily.g.dart';
+part 'sale_nearby.freezed.dart';
+part 'sale_nearby.g.dart';
 
 @freezed
-class SaleWithScheduleLocationSupply with _$SaleWithScheduleLocationSupply {
-  const SaleWithScheduleLocationSupply._();
-
+class SaleNearby with _$SaleNearby {
+  const SaleNearby._();
   @JsonSerializable(fieldRename: FieldRename.snake)
-  const factory SaleWithScheduleLocationSupply({
+  const factory SaleNearby({
     required int id,
     required bool active,
     required SaleCategory category,
@@ -27,10 +26,11 @@ class SaleWithScheduleLocationSupply with _$SaleWithScheduleLocationSupply {
     required int price,
     required int originalPrice,
     required DayScheduleWithSupplyAvailable daySchedule,
-  }) = _SaleWithScheduleLocationSupply;
+    required int distMeters,
+  }) = _SaleNearby;
 
-  factory SaleWithScheduleLocationSupply.empty() {
-    return SaleWithScheduleLocationSupply(
+  factory SaleNearby.empty() {
+    return SaleNearby(
       id: 0,
       locationId: 0,
       location: Location.empty(),
@@ -48,9 +48,10 @@ class SaleWithScheduleLocationSupply with _$SaleWithScheduleLocationSupply {
         Day.monday,
       ),
       imageUrl: '',
+      distMeters: 0,
     );
   }
 
-  factory SaleWithScheduleLocationSupply.fromJson(Map<String, dynamic> json) =>
-      _$SaleWithScheduleLocationSupplyFromJson(json);
+  factory SaleNearby.fromJson(Map<String, dynamic> json) =>
+      _$SaleNearbyFromJson(json);
 }

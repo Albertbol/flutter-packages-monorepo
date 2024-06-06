@@ -22,7 +22,6 @@ AccountLink _$AccountLinkFromJson(Map<String, dynamic> json) {
 mixin _$AccountLink {
   String get url => throw _privateConstructorUsedError;
   @SecondsSinceEpochConverterToDateTime()
-  @JsonKey(name: 'expires_at')
   DateTime get expiresAt => throw _privateConstructorUsedError;
   @SecondsSinceEpochConverterToDateTime()
   DateTime get created => throw _privateConstructorUsedError;
@@ -41,9 +40,7 @@ abstract class $AccountLinkCopyWith<$Res> {
   @useResult
   $Res call(
       {String url,
-      @SecondsSinceEpochConverterToDateTime()
-      @JsonKey(name: 'expires_at')
-      DateTime expiresAt,
+      @SecondsSinceEpochConverterToDateTime() DateTime expiresAt,
       @SecondsSinceEpochConverterToDateTime() DateTime created});
 }
 
@@ -91,9 +88,7 @@ abstract class _$$AccountLinkImplCopyWith<$Res>
   @useResult
   $Res call(
       {String url,
-      @SecondsSinceEpochConverterToDateTime()
-      @JsonKey(name: 'expires_at')
-      DateTime expiresAt,
+      @SecondsSinceEpochConverterToDateTime() DateTime expiresAt,
       @SecondsSinceEpochConverterToDateTime() DateTime created});
 }
 
@@ -130,13 +125,12 @@ class __$$AccountLinkImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$AccountLinkImpl extends _AccountLink {
   const _$AccountLinkImpl(
       {required this.url,
-      @SecondsSinceEpochConverterToDateTime()
-      @JsonKey(name: 'expires_at')
-      required this.expiresAt,
+      @SecondsSinceEpochConverterToDateTime() required this.expiresAt,
       @SecondsSinceEpochConverterToDateTime() required this.created})
       : super._();
 
@@ -147,7 +141,6 @@ class _$AccountLinkImpl extends _AccountLink {
   final String url;
   @override
   @SecondsSinceEpochConverterToDateTime()
-  @JsonKey(name: 'expires_at')
   final DateTime expiresAt;
   @override
   @SecondsSinceEpochConverterToDateTime()
@@ -190,9 +183,7 @@ class _$AccountLinkImpl extends _AccountLink {
 abstract class _AccountLink extends AccountLink {
   const factory _AccountLink(
       {required final String url,
-      @SecondsSinceEpochConverterToDateTime()
-      @JsonKey(name: 'expires_at')
-      required final DateTime expiresAt,
+      @SecondsSinceEpochConverterToDateTime() required final DateTime expiresAt,
       @SecondsSinceEpochConverterToDateTime()
       required final DateTime created}) = _$AccountLinkImpl;
   const _AccountLink._() : super._();
@@ -204,7 +195,6 @@ abstract class _AccountLink extends AccountLink {
   String get url;
   @override
   @SecondsSinceEpochConverterToDateTime()
-  @JsonKey(name: 'expires_at')
   DateTime get expiresAt;
   @override
   @SecondsSinceEpochConverterToDateTime()

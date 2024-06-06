@@ -10,11 +10,12 @@ part 'google_place_details.g.dart';
 class GooglePlaceDetails with _$GooglePlaceDetails {
   // ignore: unused_element
   const GooglePlaceDetails._();
+  @JsonSerializable(fieldRename: FieldRename.snake)
   const factory GooglePlaceDetails({
     required String address,
     required String city,
     required String country,
-    @JsonKey(name: 'google_place_id') required String googlePlaceId,
+    required String googlePlaceId,
     required double latitude,
     required double longitude,
     required String name,

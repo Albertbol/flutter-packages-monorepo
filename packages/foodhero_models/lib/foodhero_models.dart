@@ -12,8 +12,11 @@ export 'src/models/onboarding_process/onboarding_process.dart';
 export 'src/models/place_autocomplete/place_autocomplete_prediction.dart';
 export 'src/models/sale/create/create_sale.dart';
 export 'src/models/sale/daily/sale_daily.dart';
+export 'src/models/sale/nearby_sale/sale_nearby.dart';
 export 'src/models/day_schedule/with_supply_available/day_schedule_with_supply_available.dart';
 export 'src/models/day_schedule/create/day_schedule.dart';
+export 'src/models/schedule_override/schedule_override.dart';
+export 'src/models/order/order.dart';
 
 /// JSON Converters
 export 'src/converters/lat_lng.dart';

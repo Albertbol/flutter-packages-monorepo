@@ -10,11 +10,10 @@ part 'account_link.g.dart';
 class AccountLink with _$AccountLink {
   // ignore: unused_element
   const AccountLink._();
+  @JsonSerializable(fieldRename: FieldRename.snake)
   const factory AccountLink({
     required String url,
-    @SecondsSinceEpochConverterToDateTime()
-    @JsonKey(name: 'expires_at')
-    required DateTime expiresAt,
+    @SecondsSinceEpochConverterToDateTime() required DateTime expiresAt,
     @SecondsSinceEpochConverterToDateTime() required DateTime created,
   }) = _AccountLink;
 

@@ -1,3 +1,4 @@
+import 'package:foodhero_models/foodhero_models.dart';
 import 'package:intl/intl.dart';
 
 extension DateTimeExtension on DateTime {
@@ -29,5 +30,35 @@ extension DateTimeExtension on DateTime {
   /// Example: DateTime(2021, 12, 31, 23, 59).toTimeFormat() -> '23:59'
   String toTimeFormat() {
     return DateFormat('HH:mm').format(this);
+  }
+
+  bool isSameDayAs(DateTime other) {
+    return year == other.year && month == other.month && day == other.day;
+  }
+
+  bool isToday() {
+    final now = DateTime.now();
+    return now.day == day && now.month == month && now.year == year;
+  }
+
+  Day dayFromDateTime() {
+    switch (weekday) {
+      case DateTime.monday:
+        return Day.monday;
+      case DateTime.tuesday:
+        return Day.tuesday;
+      case DateTime.wednesday:
+        return Day.wednesday;
+      case DateTime.thursday:
+        return Day.thursday;
+      case DateTime.friday:
+        return Day.friday;
+      case DateTime.saturday:
+        return Day.saturday;
+      case DateTime.sunday:
+        return Day.sunday;
+      default:
+        throw Exception('Invalid day');
+    }
   }
 }

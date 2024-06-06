@@ -9,12 +9,13 @@ part 'day_schedule_with_supply_available.g.dart';
 @freezed
 class DayScheduleWithSupplyAvailable with _$DayScheduleWithSupplyAvailable {
   const DayScheduleWithSupplyAvailable._();
+  @JsonSerializable(fieldRename: FieldRename.snake)
   const factory DayScheduleWithSupplyAvailable({
     required bool closed,
-    @JsonKey(name: 'day_of_week') required Day dayOfWeek,
-    @JsonKey(name: 'end_time') required String endTime,
-    @JsonKey(name: 'start_time') required String startTime,
-    @JsonKey(name: 'supply_available') required int supplyAvailable,
+    required Day dayOfWeek,
+    required String endTime,
+    required String startTime,
+    required int supplyAvailable,
     required int supply,
   }) = _DayScheduleWithSupplyAvailable;
 
@@ -31,4 +32,6 @@ class DayScheduleWithSupplyAvailable with _$DayScheduleWithSupplyAvailable {
       supplyAvailable: 0,
     );
   }
+
+  int get sold => supply - supplyAvailable;
 }

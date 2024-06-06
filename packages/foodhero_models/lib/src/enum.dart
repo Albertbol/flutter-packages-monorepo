@@ -1,3 +1,5 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+
 enum SaleCategory {
   meals,
   pastries,
@@ -13,4 +15,14 @@ enum Day {
   friday,
   saturday,
   sunday,
+}
+
+@JsonEnum(
+  fieldRename: FieldRename.snake,
+)
+enum OrderStatus {
+  collected,
+  pendingCollection,
+  cancelled,
+  refunded,
 }

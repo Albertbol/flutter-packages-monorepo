@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'sale_daily.dart';
+part of 'sale_nearby.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,13 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-SaleWithScheduleLocationSupply _$SaleWithScheduleLocationSupplyFromJson(
-    Map<String, dynamic> json) {
-  return _SaleWithScheduleLocationSupply.fromJson(json);
+SaleNearby _$SaleNearbyFromJson(Map<String, dynamic> json) {
+  return _SaleNearby.fromJson(json);
 }
 
 /// @nodoc
-mixin _$SaleWithScheduleLocationSupply {
+mixin _$SaleNearby {
   int get id => throw _privateConstructorUsedError;
   bool get active => throw _privateConstructorUsedError;
   SaleCategory get category => throw _privateConstructorUsedError;
@@ -37,20 +36,19 @@ mixin _$SaleWithScheduleLocationSupply {
   int get originalPrice => throw _privateConstructorUsedError;
   DayScheduleWithSupplyAvailable get daySchedule =>
       throw _privateConstructorUsedError;
+  int get distMeters => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SaleWithScheduleLocationSupplyCopyWith<SaleWithScheduleLocationSupply>
-      get copyWith => throw _privateConstructorUsedError;
+  $SaleNearbyCopyWith<SaleNearby> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SaleWithScheduleLocationSupplyCopyWith<$Res> {
-  factory $SaleWithScheduleLocationSupplyCopyWith(
-          SaleWithScheduleLocationSupply value,
-          $Res Function(SaleWithScheduleLocationSupply) then) =
-      _$SaleWithScheduleLocationSupplyCopyWithImpl<$Res,
-          SaleWithScheduleLocationSupply>;
+abstract class $SaleNearbyCopyWith<$Res> {
+  factory $SaleNearbyCopyWith(
+          SaleNearby value, $Res Function(SaleNearby) then) =
+      _$SaleNearbyCopyWithImpl<$Res, SaleNearby>;
   @useResult
   $Res call(
       {int id,
@@ -67,17 +65,17 @@ abstract class $SaleWithScheduleLocationSupplyCopyWith<$Res> {
       String? pickupInformation,
       int price,
       int originalPrice,
-      DayScheduleWithSupplyAvailable daySchedule});
+      DayScheduleWithSupplyAvailable daySchedule,
+      int distMeters});
 
   $LocationCopyWith<$Res> get location;
   $DayScheduleWithSupplyAvailableCopyWith<$Res> get daySchedule;
 }
 
 /// @nodoc
-class _$SaleWithScheduleLocationSupplyCopyWithImpl<$Res,
-        $Val extends SaleWithScheduleLocationSupply>
-    implements $SaleWithScheduleLocationSupplyCopyWith<$Res> {
-  _$SaleWithScheduleLocationSupplyCopyWithImpl(this._value, this._then);
+class _$SaleNearbyCopyWithImpl<$Res, $Val extends SaleNearby>
+    implements $SaleNearbyCopyWith<$Res> {
+  _$SaleNearbyCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -102,6 +100,7 @@ class _$SaleWithScheduleLocationSupplyCopyWithImpl<$Res,
     Object? price = null,
     Object? originalPrice = null,
     Object? daySchedule = null,
+    Object? distMeters = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -164,6 +163,10 @@ class _$SaleWithScheduleLocationSupplyCopyWithImpl<$Res,
           ? _value.daySchedule
           : daySchedule // ignore: cast_nullable_to_non_nullable
               as DayScheduleWithSupplyAvailable,
+      distMeters: null == distMeters
+          ? _value.distMeters
+          : distMeters // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 
@@ -186,12 +189,11 @@ class _$SaleWithScheduleLocationSupplyCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$SaleWithScheduleLocationSupplyImplCopyWith<$Res>
-    implements $SaleWithScheduleLocationSupplyCopyWith<$Res> {
-  factory _$$SaleWithScheduleLocationSupplyImplCopyWith(
-          _$SaleWithScheduleLocationSupplyImpl value,
-          $Res Function(_$SaleWithScheduleLocationSupplyImpl) then) =
-      __$$SaleWithScheduleLocationSupplyImplCopyWithImpl<$Res>;
+abstract class _$$SaleNearbyImplCopyWith<$Res>
+    implements $SaleNearbyCopyWith<$Res> {
+  factory _$$SaleNearbyImplCopyWith(
+          _$SaleNearbyImpl value, $Res Function(_$SaleNearbyImpl) then) =
+      __$$SaleNearbyImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -209,7 +211,8 @@ abstract class _$$SaleWithScheduleLocationSupplyImplCopyWith<$Res>
       String? pickupInformation,
       int price,
       int originalPrice,
-      DayScheduleWithSupplyAvailable daySchedule});
+      DayScheduleWithSupplyAvailable daySchedule,
+      int distMeters});
 
   @override
   $LocationCopyWith<$Res> get location;
@@ -218,13 +221,11 @@ abstract class _$$SaleWithScheduleLocationSupplyImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$SaleWithScheduleLocationSupplyImplCopyWithImpl<$Res>
-    extends _$SaleWithScheduleLocationSupplyCopyWithImpl<$Res,
-        _$SaleWithScheduleLocationSupplyImpl>
-    implements _$$SaleWithScheduleLocationSupplyImplCopyWith<$Res> {
-  __$$SaleWithScheduleLocationSupplyImplCopyWithImpl(
-      _$SaleWithScheduleLocationSupplyImpl _value,
-      $Res Function(_$SaleWithScheduleLocationSupplyImpl) _then)
+class __$$SaleNearbyImplCopyWithImpl<$Res>
+    extends _$SaleNearbyCopyWithImpl<$Res, _$SaleNearbyImpl>
+    implements _$$SaleNearbyImplCopyWith<$Res> {
+  __$$SaleNearbyImplCopyWithImpl(
+      _$SaleNearbyImpl _value, $Res Function(_$SaleNearbyImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -245,8 +246,9 @@ class __$$SaleWithScheduleLocationSupplyImplCopyWithImpl<$Res>
     Object? price = null,
     Object? originalPrice = null,
     Object? daySchedule = null,
+    Object? distMeters = null,
   }) {
-    return _then(_$SaleWithScheduleLocationSupplyImpl(
+    return _then(_$SaleNearbyImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -307,6 +309,10 @@ class __$$SaleWithScheduleLocationSupplyImplCopyWithImpl<$Res>
           ? _value.daySchedule
           : daySchedule // ignore: cast_nullable_to_non_nullable
               as DayScheduleWithSupplyAvailable,
+      distMeters: null == distMeters
+          ? _value.distMeters
+          : distMeters // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -314,9 +320,8 @@ class __$$SaleWithScheduleLocationSupplyImplCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(fieldRename: FieldRename.snake)
-class _$SaleWithScheduleLocationSupplyImpl
-    extends _SaleWithScheduleLocationSupply {
-  const _$SaleWithScheduleLocationSupplyImpl(
+class _$SaleNearbyImpl extends _SaleNearby {
+  const _$SaleNearbyImpl(
       {required this.id,
       required this.active,
       required this.category,
@@ -331,12 +336,12 @@ class _$SaleWithScheduleLocationSupplyImpl
       required this.pickupInformation,
       required this.price,
       required this.originalPrice,
-      required this.daySchedule})
+      required this.daySchedule,
+      required this.distMeters})
       : super._();
 
-  factory _$SaleWithScheduleLocationSupplyImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$SaleWithScheduleLocationSupplyImplFromJson(json);
+  factory _$SaleNearbyImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SaleNearbyImplFromJson(json);
 
   @override
   final int id;
@@ -368,17 +373,19 @@ class _$SaleWithScheduleLocationSupplyImpl
   final int originalPrice;
   @override
   final DayScheduleWithSupplyAvailable daySchedule;
+  @override
+  final int distMeters;
 
   @override
   String toString() {
-    return 'SaleWithScheduleLocationSupply(id: $id, active: $active, category: $category, currency: $currency, currencySymbol: $currencySymbol, description: $description, enabled: $enabled, imageUrl: $imageUrl, locationId: $locationId, location: $location, name: $name, pickupInformation: $pickupInformation, price: $price, originalPrice: $originalPrice, daySchedule: $daySchedule)';
+    return 'SaleNearby(id: $id, active: $active, category: $category, currency: $currency, currencySymbol: $currencySymbol, description: $description, enabled: $enabled, imageUrl: $imageUrl, locationId: $locationId, location: $location, name: $name, pickupInformation: $pickupInformation, price: $price, originalPrice: $originalPrice, daySchedule: $daySchedule, distMeters: $distMeters)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SaleWithScheduleLocationSupplyImpl &&
+            other is _$SaleNearbyImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.active, active) || other.active == active) &&
             (identical(other.category, category) ||
@@ -403,7 +410,9 @@ class _$SaleWithScheduleLocationSupplyImpl
             (identical(other.originalPrice, originalPrice) ||
                 other.originalPrice == originalPrice) &&
             (identical(other.daySchedule, daySchedule) ||
-                other.daySchedule == daySchedule));
+                other.daySchedule == daySchedule) &&
+            (identical(other.distMeters, distMeters) ||
+                other.distMeters == distMeters));
   }
 
   @JsonKey(ignore: true)
@@ -424,47 +433,45 @@ class _$SaleWithScheduleLocationSupplyImpl
       pickupInformation,
       price,
       originalPrice,
-      daySchedule);
+      daySchedule,
+      distMeters);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SaleWithScheduleLocationSupplyImplCopyWith<
-          _$SaleWithScheduleLocationSupplyImpl>
-      get copyWith => __$$SaleWithScheduleLocationSupplyImplCopyWithImpl<
-          _$SaleWithScheduleLocationSupplyImpl>(this, _$identity);
+  _$$SaleNearbyImplCopyWith<_$SaleNearbyImpl> get copyWith =>
+      __$$SaleNearbyImplCopyWithImpl<_$SaleNearbyImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SaleWithScheduleLocationSupplyImplToJson(
+    return _$$SaleNearbyImplToJson(
       this,
     );
   }
 }
 
-abstract class _SaleWithScheduleLocationSupply
-    extends SaleWithScheduleLocationSupply {
-  const factory _SaleWithScheduleLocationSupply(
-          {required final int id,
-          required final bool active,
-          required final SaleCategory category,
-          required final String currency,
-          required final String currencySymbol,
-          required final String description,
-          required final bool enabled,
-          required final String imageUrl,
-          required final int locationId,
-          required final Location location,
-          required final String name,
-          required final String? pickupInformation,
-          required final int price,
-          required final int originalPrice,
-          required final DayScheduleWithSupplyAvailable daySchedule}) =
-      _$SaleWithScheduleLocationSupplyImpl;
-  const _SaleWithScheduleLocationSupply._() : super._();
+abstract class _SaleNearby extends SaleNearby {
+  const factory _SaleNearby(
+      {required final int id,
+      required final bool active,
+      required final SaleCategory category,
+      required final String currency,
+      required final String currencySymbol,
+      required final String description,
+      required final bool enabled,
+      required final String imageUrl,
+      required final int locationId,
+      required final Location location,
+      required final String name,
+      required final String? pickupInformation,
+      required final int price,
+      required final int originalPrice,
+      required final DayScheduleWithSupplyAvailable daySchedule,
+      required final int distMeters}) = _$SaleNearbyImpl;
+  const _SaleNearby._() : super._();
 
-  factory _SaleWithScheduleLocationSupply.fromJson(Map<String, dynamic> json) =
-      _$SaleWithScheduleLocationSupplyImpl.fromJson;
+  factory _SaleNearby.fromJson(Map<String, dynamic> json) =
+      _$SaleNearbyImpl.fromJson;
 
   @override
   int get id;
@@ -497,8 +504,9 @@ abstract class _SaleWithScheduleLocationSupply
   @override
   DayScheduleWithSupplyAvailable get daySchedule;
   @override
+  int get distMeters;
+  @override
   @JsonKey(ignore: true)
-  _$$SaleWithScheduleLocationSupplyImplCopyWith<
-          _$SaleWithScheduleLocationSupplyImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$SaleNearbyImplCopyWith<_$SaleNearbyImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

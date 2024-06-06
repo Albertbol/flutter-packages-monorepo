@@ -8,30 +8,30 @@ part of 'create_sale.dart';
 
 _$CreateSaleImpl _$$CreateSaleImplFromJson(Map<String, dynamic> json) =>
     _$CreateSaleImpl(
-      locationId: json['locationId'] as int,
+      locationId: json['location_id'] as int,
       name: json['name'] as String,
       description: json['description'] as String,
-      pickupInformation: json['pickupInformation'] as String?,
+      pickupInformation: json['pickup_information'] as String?,
       price: json['price'] as int,
-      originalPrice: json['originalPrice'] as int,
+      originalPrice: json['original_price'] as int,
       category: $enumDecode(_$SaleCategoryEnumMap, json['category']),
-      daySchedules: (json['daySchedules'] as List<dynamic>)
+      daySchedules: (json['day_schedules'] as List<dynamic>)
           .map((e) => DaySchedule.fromJson(e as Map<String, dynamic>))
           .toList(),
-      imageUrl: json['imageUrl'] as String,
+      imageUrl: json['image_url'] as String,
     );
 
 Map<String, dynamic> _$$CreateSaleImplToJson(_$CreateSaleImpl instance) =>
     <String, dynamic>{
-      'locationId': instance.locationId,
+      'location_id': instance.locationId,
       'name': instance.name,
       'description': instance.description,
-      'pickupInformation': instance.pickupInformation,
+      'pickup_information': instance.pickupInformation,
       'price': instance.price,
-      'originalPrice': instance.originalPrice,
+      'original_price': instance.originalPrice,
       'category': _$SaleCategoryEnumMap[instance.category]!,
-      'daySchedules': _daySchedulesToJson(instance.daySchedules),
-      'imageUrl': instance.imageUrl,
+      'day_schedules': _daySchedulesToJson(instance.daySchedules),
+      'image_url': instance.imageUrl,
     };
 
 const _$SaleCategoryEnumMap = {

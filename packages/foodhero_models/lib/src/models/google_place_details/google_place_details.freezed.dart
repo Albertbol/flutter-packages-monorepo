@@ -23,7 +23,6 @@ mixin _$GooglePlaceDetails {
   String get address => throw _privateConstructorUsedError;
   String get city => throw _privateConstructorUsedError;
   String get country => throw _privateConstructorUsedError;
-  @JsonKey(name: 'google_place_id')
   String get googlePlaceId => throw _privateConstructorUsedError;
   double get latitude => throw _privateConstructorUsedError;
   double get longitude => throw _privateConstructorUsedError;
@@ -45,7 +44,7 @@ abstract class $GooglePlaceDetailsCopyWith<$Res> {
       {String address,
       String city,
       String country,
-      @JsonKey(name: 'google_place_id') String googlePlaceId,
+      String googlePlaceId,
       double latitude,
       double longitude,
       String name});
@@ -117,7 +116,7 @@ abstract class _$$GooglePlaceDetailsImplCopyWith<$Res>
       {String address,
       String city,
       String country,
-      @JsonKey(name: 'google_place_id') String googlePlaceId,
+      String googlePlaceId,
       double latitude,
       double longitude,
       String name});
@@ -176,13 +175,14 @@ class __$$GooglePlaceDetailsImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$GooglePlaceDetailsImpl extends _GooglePlaceDetails {
   const _$GooglePlaceDetailsImpl(
       {required this.address,
       required this.city,
       required this.country,
-      @JsonKey(name: 'google_place_id') required this.googlePlaceId,
+      required this.googlePlaceId,
       required this.latitude,
       required this.longitude,
       required this.name})
@@ -198,7 +198,6 @@ class _$GooglePlaceDetailsImpl extends _GooglePlaceDetails {
   @override
   final String country;
   @override
-  @JsonKey(name: 'google_place_id')
   final String googlePlaceId;
   @override
   final double latitude;
@@ -254,7 +253,7 @@ abstract class _GooglePlaceDetails extends GooglePlaceDetails {
       {required final String address,
       required final String city,
       required final String country,
-      @JsonKey(name: 'google_place_id') required final String googlePlaceId,
+      required final String googlePlaceId,
       required final double latitude,
       required final double longitude,
       required final String name}) = _$GooglePlaceDetailsImpl;
@@ -270,7 +269,6 @@ abstract class _GooglePlaceDetails extends GooglePlaceDetails {
   @override
   String get country;
   @override
-  @JsonKey(name: 'google_place_id')
   String get googlePlaceId;
   @override
   double get latitude;

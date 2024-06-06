@@ -21,11 +21,8 @@ DaySchedule _$DayScheduleFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$DaySchedule {
   bool get closed => throw _privateConstructorUsedError;
-  @JsonKey(name: 'day_of_week')
   Day get dayOfWeek => throw _privateConstructorUsedError;
-  @JsonKey(name: 'end_time')
   String get endTime => throw _privateConstructorUsedError;
-  @JsonKey(name: 'start_time')
   String get startTime => throw _privateConstructorUsedError;
   int get supply => throw _privateConstructorUsedError;
 
@@ -43,9 +40,9 @@ abstract class $DayScheduleCopyWith<$Res> {
   @useResult
   $Res call(
       {bool closed,
-      @JsonKey(name: 'day_of_week') Day dayOfWeek,
-      @JsonKey(name: 'end_time') String endTime,
-      @JsonKey(name: 'start_time') String startTime,
+      Day dayOfWeek,
+      String endTime,
+      String startTime,
       int supply});
 }
 
@@ -103,9 +100,9 @@ abstract class _$$DayScheduleImplCopyWith<$Res>
   @useResult
   $Res call(
       {bool closed,
-      @JsonKey(name: 'day_of_week') Day dayOfWeek,
-      @JsonKey(name: 'end_time') String endTime,
-      @JsonKey(name: 'start_time') String startTime,
+      Day dayOfWeek,
+      String endTime,
+      String startTime,
       int supply});
 }
 
@@ -152,13 +149,14 @@ class __$$DayScheduleImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$DayScheduleImpl extends _DaySchedule {
   const _$DayScheduleImpl(
       {required this.closed,
-      @JsonKey(name: 'day_of_week') required this.dayOfWeek,
-      @JsonKey(name: 'end_time') required this.endTime,
-      @JsonKey(name: 'start_time') required this.startTime,
+      required this.dayOfWeek,
+      required this.endTime,
+      required this.startTime,
       required this.supply})
       : super._();
 
@@ -168,13 +166,10 @@ class _$DayScheduleImpl extends _DaySchedule {
   @override
   final bool closed;
   @override
-  @JsonKey(name: 'day_of_week')
   final Day dayOfWeek;
   @override
-  @JsonKey(name: 'end_time')
   final String endTime;
   @override
-  @JsonKey(name: 'start_time')
   final String startTime;
   @override
   final int supply;
@@ -220,9 +215,9 @@ class _$DayScheduleImpl extends _DaySchedule {
 abstract class _DaySchedule extends DaySchedule {
   const factory _DaySchedule(
       {required final bool closed,
-      @JsonKey(name: 'day_of_week') required final Day dayOfWeek,
-      @JsonKey(name: 'end_time') required final String endTime,
-      @JsonKey(name: 'start_time') required final String startTime,
+      required final Day dayOfWeek,
+      required final String endTime,
+      required final String startTime,
       required final int supply}) = _$DayScheduleImpl;
   const _DaySchedule._() : super._();
 
@@ -232,13 +227,10 @@ abstract class _DaySchedule extends DaySchedule {
   @override
   bool get closed;
   @override
-  @JsonKey(name: 'day_of_week')
   Day get dayOfWeek;
   @override
-  @JsonKey(name: 'end_time')
   String get endTime;
   @override
-  @JsonKey(name: 'start_time')
   String get startTime;
   @override
   int get supply;

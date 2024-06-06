@@ -23,15 +23,13 @@ mixin _$Location {
   String get address => throw _privateConstructorUsedError;
   String get city => throw _privateConstructorUsedError;
   String get country => throw _privateConstructorUsedError;
-  @JsonKey(name: 'google_place_id')
   String get googlePlaceId => throw _privateConstructorUsedError;
   int get id => throw _privateConstructorUsedError;
   double get latitude => throw _privateConstructorUsedError;
   double get longitude => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'logo_url')
   String get logoUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'organization_id')
+  String get mapMarkerUrl => throw _privateConstructorUsedError;
   int get organizationId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -49,13 +47,14 @@ abstract class $LocationCopyWith<$Res> {
       {String address,
       String city,
       String country,
-      @JsonKey(name: 'google_place_id') String googlePlaceId,
+      String googlePlaceId,
       int id,
       double latitude,
       double longitude,
       String name,
-      @JsonKey(name: 'logo_url') String logoUrl,
-      @JsonKey(name: 'organization_id') int organizationId});
+      String logoUrl,
+      String mapMarkerUrl,
+      int organizationId});
 }
 
 /// @nodoc
@@ -80,6 +79,7 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     Object? longitude = null,
     Object? name = null,
     Object? logoUrl = null,
+    Object? mapMarkerUrl = null,
     Object? organizationId = null,
   }) {
     return _then(_value.copyWith(
@@ -119,6 +119,10 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
           ? _value.logoUrl
           : logoUrl // ignore: cast_nullable_to_non_nullable
               as String,
+      mapMarkerUrl: null == mapMarkerUrl
+          ? _value.mapMarkerUrl
+          : mapMarkerUrl // ignore: cast_nullable_to_non_nullable
+              as String,
       organizationId: null == organizationId
           ? _value.organizationId
           : organizationId // ignore: cast_nullable_to_non_nullable
@@ -139,13 +143,14 @@ abstract class _$$LocationImplCopyWith<$Res>
       {String address,
       String city,
       String country,
-      @JsonKey(name: 'google_place_id') String googlePlaceId,
+      String googlePlaceId,
       int id,
       double latitude,
       double longitude,
       String name,
-      @JsonKey(name: 'logo_url') String logoUrl,
-      @JsonKey(name: 'organization_id') int organizationId});
+      String logoUrl,
+      String mapMarkerUrl,
+      int organizationId});
 }
 
 /// @nodoc
@@ -168,6 +173,7 @@ class __$$LocationImplCopyWithImpl<$Res>
     Object? longitude = null,
     Object? name = null,
     Object? logoUrl = null,
+    Object? mapMarkerUrl = null,
     Object? organizationId = null,
   }) {
     return _then(_$LocationImpl(
@@ -207,6 +213,10 @@ class __$$LocationImplCopyWithImpl<$Res>
           ? _value.logoUrl
           : logoUrl // ignore: cast_nullable_to_non_nullable
               as String,
+      mapMarkerUrl: null == mapMarkerUrl
+          ? _value.mapMarkerUrl
+          : mapMarkerUrl // ignore: cast_nullable_to_non_nullable
+              as String,
       organizationId: null == organizationId
           ? _value.organizationId
           : organizationId // ignore: cast_nullable_to_non_nullable
@@ -216,19 +226,21 @@ class __$$LocationImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$LocationImpl extends _Location {
   const _$LocationImpl(
       {required this.address,
       required this.city,
       required this.country,
-      @JsonKey(name: 'google_place_id') required this.googlePlaceId,
+      required this.googlePlaceId,
       required this.id,
       required this.latitude,
       required this.longitude,
       required this.name,
-      @JsonKey(name: 'logo_url') required this.logoUrl,
-      @JsonKey(name: 'organization_id') required this.organizationId})
+      required this.logoUrl,
+      required this.mapMarkerUrl,
+      required this.organizationId})
       : super._();
 
   factory _$LocationImpl.fromJson(Map<String, dynamic> json) =>
@@ -241,7 +253,6 @@ class _$LocationImpl extends _Location {
   @override
   final String country;
   @override
-  @JsonKey(name: 'google_place_id')
   final String googlePlaceId;
   @override
   final int id;
@@ -252,15 +263,15 @@ class _$LocationImpl extends _Location {
   @override
   final String name;
   @override
-  @JsonKey(name: 'logo_url')
   final String logoUrl;
   @override
-  @JsonKey(name: 'organization_id')
+  final String mapMarkerUrl;
+  @override
   final int organizationId;
 
   @override
   String toString() {
-    return 'Location(address: $address, city: $city, country: $country, googlePlaceId: $googlePlaceId, id: $id, latitude: $latitude, longitude: $longitude, name: $name, logoUrl: $logoUrl, organizationId: $organizationId)';
+    return 'Location(address: $address, city: $city, country: $country, googlePlaceId: $googlePlaceId, id: $id, latitude: $latitude, longitude: $longitude, name: $name, logoUrl: $logoUrl, mapMarkerUrl: $mapMarkerUrl, organizationId: $organizationId)';
   }
 
   @override
@@ -280,14 +291,27 @@ class _$LocationImpl extends _Location {
                 other.longitude == longitude) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.logoUrl, logoUrl) || other.logoUrl == logoUrl) &&
+            (identical(other.mapMarkerUrl, mapMarkerUrl) ||
+                other.mapMarkerUrl == mapMarkerUrl) &&
             (identical(other.organizationId, organizationId) ||
                 other.organizationId == organizationId));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, address, city, country,
-      googlePlaceId, id, latitude, longitude, name, logoUrl, organizationId);
+  int get hashCode => Object.hash(
+      runtimeType,
+      address,
+      city,
+      country,
+      googlePlaceId,
+      id,
+      latitude,
+      longitude,
+      name,
+      logoUrl,
+      mapMarkerUrl,
+      organizationId);
 
   @JsonKey(ignore: true)
   @override
@@ -308,13 +332,13 @@ abstract class _Location extends Location {
       {required final String address,
       required final String city,
       required final String country,
-      @JsonKey(name: 'google_place_id') required final String googlePlaceId,
+      required final String googlePlaceId,
       required final int id,
       required final double latitude,
       required final double longitude,
       required final String name,
-      @JsonKey(name: 'logo_url') required final String logoUrl,
-      @JsonKey(name: 'organization_id')
+      required final String logoUrl,
+      required final String mapMarkerUrl,
       required final int organizationId}) = _$LocationImpl;
   const _Location._() : super._();
 
@@ -328,7 +352,6 @@ abstract class _Location extends Location {
   @override
   String get country;
   @override
-  @JsonKey(name: 'google_place_id')
   String get googlePlaceId;
   @override
   int get id;
@@ -339,10 +362,10 @@ abstract class _Location extends Location {
   @override
   String get name;
   @override
-  @JsonKey(name: 'logo_url')
   String get logoUrl;
   @override
-  @JsonKey(name: 'organization_id')
+  String get mapMarkerUrl;
+  @override
   int get organizationId;
   @override
   @JsonKey(ignore: true)

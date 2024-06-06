@@ -10,17 +10,19 @@ part 'location.g.dart';
 class Location with _$Location {
   // ignore: unused_element
   const Location._();
+  @JsonSerializable(fieldRename: FieldRename.snake)
   const factory Location({
     required String address,
     required String city,
     required String country,
-    @JsonKey(name: 'google_place_id') required String googlePlaceId,
+    required String googlePlaceId,
     required int id,
     required double latitude,
     required double longitude,
     required String name,
-    @JsonKey(name: 'logo_url') required String logoUrl,
-    @JsonKey(name: 'organization_id') required int organizationId,
+    required String logoUrl,
+    required String mapMarkerUrl,
+    required int organizationId,
   }) = _Location;
 
   LatLng get location => LatLng(latitude, longitude);
@@ -39,6 +41,7 @@ class Location with _$Location {
       city: '',
       country: '',
       logoUrl: '',
+      mapMarkerUrl: '',
       googlePlaceId: '',
     );
   }

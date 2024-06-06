@@ -17,6 +17,7 @@ _$LocationImpl _$$LocationImplFromJson(Map<String, dynamic> json) =>
       longitude: (json['longitude'] as num).toDouble(),
       name: json['name'] as String,
       logoUrl: json['logo_url'] as String,
+      mapMarkerUrl: json['map_marker_url'] as String,
       organizationId: json['organization_id'] as int,
     );
 
@@ -31,5 +32,6 @@ Map<String, dynamic> _$$LocationImplToJson(_$LocationImpl instance) =>
       'longitude': instance.longitude,
       'name': instance.name,
       'logo_url': instance.logoUrl,
+      'map_marker_url': instance.mapMarkerUrl,
       'organization_id': instance.organizationId,
     };

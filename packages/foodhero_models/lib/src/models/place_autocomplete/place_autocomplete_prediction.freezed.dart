@@ -22,10 +22,8 @@ PlaceAutocompletePrediction _$PlaceAutocompletePredictionFromJson(
 /// @nodoc
 mixin _$PlaceAutocompletePrediction {
   String get description => throw _privateConstructorUsedError;
-  @JsonKey(name: 'matched_substrings')
   List<MatchedSubstring> get matchedSubstrings =>
       throw _privateConstructorUsedError;
-  @JsonKey(name: 'place_id')
   String get placeId => throw _privateConstructorUsedError;
   String get reference => throw _privateConstructorUsedError;
   List<String> get types => throw _privateConstructorUsedError;
@@ -46,9 +44,8 @@ abstract class $PlaceAutocompletePredictionCopyWith<$Res> {
   @useResult
   $Res call(
       {String description,
-      @JsonKey(name: 'matched_substrings')
       List<MatchedSubstring> matchedSubstrings,
-      @JsonKey(name: 'place_id') String placeId,
+      String placeId,
       String reference,
       List<String> types});
 }
@@ -109,9 +106,8 @@ abstract class _$$PlaceAutocompletePredictionImplCopyWith<$Res>
   @useResult
   $Res call(
       {String description,
-      @JsonKey(name: 'matched_substrings')
       List<MatchedSubstring> matchedSubstrings,
-      @JsonKey(name: 'place_id') String placeId,
+      String placeId,
       String reference,
       List<String> types});
 }
@@ -161,14 +157,14 @@ class __$$PlaceAutocompletePredictionImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$PlaceAutocompletePredictionImpl
     implements _PlaceAutocompletePrediction {
   const _$PlaceAutocompletePredictionImpl(
       {required this.description,
-      @JsonKey(name: 'matched_substrings')
       required final List<MatchedSubstring> matchedSubstrings,
-      @JsonKey(name: 'place_id') required this.placeId,
+      required this.placeId,
       required this.reference,
       required final List<String> types})
       : _matchedSubstrings = matchedSubstrings,
@@ -182,7 +178,6 @@ class _$PlaceAutocompletePredictionImpl
   final String description;
   final List<MatchedSubstring> _matchedSubstrings;
   @override
-  @JsonKey(name: 'matched_substrings')
   List<MatchedSubstring> get matchedSubstrings {
     if (_matchedSubstrings is EqualUnmodifiableListView)
       return _matchedSubstrings;
@@ -191,7 +186,6 @@ class _$PlaceAutocompletePredictionImpl
   }
 
   @override
-  @JsonKey(name: 'place_id')
   final String placeId;
   @override
   final String reference;
@@ -252,9 +246,8 @@ abstract class _PlaceAutocompletePrediction
     implements PlaceAutocompletePrediction {
   const factory _PlaceAutocompletePrediction(
       {required final String description,
-      @JsonKey(name: 'matched_substrings')
       required final List<MatchedSubstring> matchedSubstrings,
-      @JsonKey(name: 'place_id') required final String placeId,
+      required final String placeId,
       required final String reference,
       required final List<String> types}) = _$PlaceAutocompletePredictionImpl;
 
@@ -264,10 +257,8 @@ abstract class _PlaceAutocompletePrediction
   @override
   String get description;
   @override
-  @JsonKey(name: 'matched_substrings')
   List<MatchedSubstring> get matchedSubstrings;
   @override
-  @JsonKey(name: 'place_id')
   String get placeId;
   @override
   String get reference;
