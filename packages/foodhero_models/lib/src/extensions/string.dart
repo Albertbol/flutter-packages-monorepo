@@ -1,3 +1,5 @@
+import 'package:intl/intl.dart';
+
 extension StringExtension on String {
   String capitalize() {
     if (isEmpty) {
@@ -10,8 +12,8 @@ extension StringExtension on String {
   }
 
   String hhmmssToHhmm() {
-    final parts = split(':');
-    return '${parts[0]}:${parts[1]}';
+    final parsedTime = DateFormat.Hms().parse(this);
+    return DateFormat.Hm().format(parsedTime); // Formats the time as HH:mm
   }
 
   int toTimeInt() {
