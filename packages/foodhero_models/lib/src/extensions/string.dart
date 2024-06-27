@@ -1,4 +1,4 @@
-import 'package:intl/intl.dart';
+import 'package:timezone/timezone.dart' as tz;
 
 extension StringExtension on String {
   String capitalize() {
@@ -12,12 +12,21 @@ extension StringExtension on String {
   }
 
   String hhmmssToHhmm() {
-    final parsedTime = DateFormat.Hms().parse(this);
-    return DateFormat.Hm().format(parsedTime); // Formats the time as HH:mm
+    return 5 < length ? substring(0, 5) : this;
   }
 
   int toTimeInt() {
     final parts = split(':');
     return int.parse(parts[0]) * 100 + int.parse(parts[1]);
+  }
+
+  DateTime toDateTimeToday(String timeZoneId) {
+    final now = DateTime.now();
+    final parts = split(':');
+    final hours = int.parse(parts[0]);
+    final minutes = int.parse(parts[1]);
+    final location = tz.getLocation(timeZoneId);
+    return tz.TZDateTime(
+        location, now.year, now.month, now.day, hours, minutes);
   }
 }

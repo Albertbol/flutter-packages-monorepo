@@ -1,7 +1,6 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:foodhero_models/foodhero_models.dart';
-import 'package:foodhero_models/src/enum.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'day_schedule.freezed.dart';

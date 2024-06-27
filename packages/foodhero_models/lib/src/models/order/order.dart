@@ -1,6 +1,7 @@
 import 'package:foodhero_models/foodhero_models.dart';
 import 'package:foodhero_models/src/converters/string_time_stamp_to_date_time.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:timezone/timezone.dart' as tz;
 
 part 'order.g.dart';
 part 'order.freezed.dart';
@@ -44,9 +45,23 @@ class Order with _$Order {
         collectedAt: DateTime.now(),
       );
 
+  DateTime get endTimeTodayInRiga {
+    return saleSnapshot.daySchedule.endTime
+        .hhmmssToHhmm()
+        .toDateTimeToday('Europe/Riga');
+  }
+
   bool get isPending =>
       createdAt.isToday() &&
       saleSnapshot.daySchedule.endTime.toTimeInt() >
           DateTime.now().toTimeInt() &&
       status == OrderStatus.pendingCollection;
+
+  bool get cancellable {
+    final riga = tz.getLocation('Europe/Riga');
+    final nowInRiga = tz.TZDateTime.now(riga);
+
+    final difference = endTimeTodayInRiga.difference(nowInRiga);
+    return difference >= Duration(minutes: 30);
+  }
 }
